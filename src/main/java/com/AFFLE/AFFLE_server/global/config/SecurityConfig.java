@@ -1,4 +1,4 @@
-package com.AFFLE.AFFLE_server.config;
+package com.AFFLE.AFFLE_server.global.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

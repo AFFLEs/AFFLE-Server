@@ -1,4 +1,4 @@
-package com.AFFLE.AFFLE_server.domain;
+package com.AFFLE.AFFLE_server.domain.user.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
