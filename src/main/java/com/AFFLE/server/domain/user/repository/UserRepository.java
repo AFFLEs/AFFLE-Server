@@ -1,6 +1,6 @@
-package com.AFFLE.AFFLE_server.domain.user.repository;
+package com.AFFLE.server.domain.user.repository;
 
-import com.AFFLE.AFFLE_server.domain.user.entity.User;
+import com.AFFLE.server.domain.user.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface UserRepository extends JpaRepository<User, Long> {

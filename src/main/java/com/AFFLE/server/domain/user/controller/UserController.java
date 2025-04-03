@@ -1,7 +1,7 @@
-package com.AFFLE.AFFLE_server.domain.user.controller;
+package com.AFFLE.server.domain.user.controller;
 
-import com.AFFLE.AFFLE_server.domain.user.entity.User;
-import com.AFFLE.AFFLE_server.domain.user.repository.UserRepository;
+import com.AFFLE.server.domain.user.entity.User;
+import com.AFFLE.server.domain.user.repository.UserRepository;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

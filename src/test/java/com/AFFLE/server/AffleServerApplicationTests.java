@@ -1,4 +1,4 @@
-package com.AFFLE.AFFLE_server;
+package com.AFFLE.server;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
