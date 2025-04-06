@@ -34,4 +34,7 @@ public class ElderMeterMan {
 
     @JsonFormat(pattern = "yyyy.MM.dd")
     private LocalDate visitDate;
+
+    @JsonFormat(pattern = "yyyy.MM.dd")
+    private LocalDate nextVisitDate;
 }
