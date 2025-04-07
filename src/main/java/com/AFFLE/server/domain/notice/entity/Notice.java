@@ -22,8 +22,18 @@ public class Notice {
     @JoinColumn(name = "metermanId")
     private MeterMan meterMan;
 
+    @Column(length = 50)
     private String title;
     private LocalDate date;
     private String content;
+
+    @Column(length = 300)
     private String fileUrl;
+
+    @Enumerated(EnumType.STRING)
+    private Target target;
+
+    public enum Target {
+        검침원, 노인
+    }
 }
