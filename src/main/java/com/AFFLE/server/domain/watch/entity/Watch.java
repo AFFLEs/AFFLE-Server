@@ -22,8 +22,14 @@ public class Watch {
     private Elder elder;
 
     private Integer heartRate;
+
+    @Column(precision = 5, scale = 2)
     private BigDecimal skinTemp;
+
+    @Column(length = 300)
     private String gps;
+
+    @Column(columnDefinition = "TINYINT(1) DEFAULT 0")
     private Boolean isWorn; // true(1): 착용, false(0): 미착용
     private LocalDateTime curWorn;
 

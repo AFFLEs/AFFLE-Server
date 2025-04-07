@@ -13,21 +13,17 @@ public class MeterMan {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer metermanId;
 
-    @Enumerated(EnumType.STRING)
-    private Role role;
-
-    // private Boolean isAdmin; // true면 총괄, false면 일반 검침원
+    @Column(columnDefinition = "TINYINT(1)")
+    private Boolean isAdmin; // true면 총괄, false면 일반 검침원
 
     @Enumerated(EnumType.STRING)
     private WorkStatus workStatus;
 
+    @Column(length = 50)
     private String name;
-    private String metermanLoc;
 
-    public enum Role {
-        MANAGER, // 총괄
-        WORKER   // 일반 검침원
-    }
+    @Column(length = 300)
+    private String metermanLoc;
 
     public enum WorkStatus {
         근무중, 휴게시간, 퇴근

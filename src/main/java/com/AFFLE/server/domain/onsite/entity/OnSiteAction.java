@@ -34,6 +34,8 @@ public class OnSiteAction {
     private LocalDateTime occurTime;
     private LocalDateTime completedTime;
     private LocalDateTime assignedTime;
+
+    @Column(length = 300)
     private String cause;
 
     public enum ActionStatus {
