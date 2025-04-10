@@ -1,6 +1,6 @@
-package com.AFFLE.server.domain.notice.entity;
+package com.AFFLE.server.domain.Entity;
 
-import com.AFFLE.server.domain.meterman.entity.MeterMan;
+import com.AFFLE.server.domain.Entity.MeterMan;
 import jakarta.persistence.*;
 import lombok.*;
 

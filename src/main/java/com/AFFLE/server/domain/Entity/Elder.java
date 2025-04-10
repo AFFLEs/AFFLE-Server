@@ -1,4 +1,4 @@
-package com.AFFLE.server.domain.elder.entity;
+package com.AFFLE.server.domain.Entity;
 
 import jakarta.persistence.*;
 import lombok.*;

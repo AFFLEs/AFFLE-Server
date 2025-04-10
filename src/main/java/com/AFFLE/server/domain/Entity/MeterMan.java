@@ -1,4 +1,4 @@
-package com.AFFLE.server.domain.meterman.entity;
+package com.AFFLE.server.domain.Entity;
 
 import jakarta.persistence.*;
 import lombok.*;
