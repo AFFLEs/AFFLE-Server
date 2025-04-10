@@ -1,7 +1,7 @@
-package com.AFFLE.server.domain.onsite.entity;
+package com.AFFLE.server.domain.Entity;
 
-import com.AFFLE.server.domain.elder.entity.Elder;
-import com.AFFLE.server.domain.meterman.entity.MeterMan;
+import com.AFFLE.server.domain.Entity.Elder;
+import com.AFFLE.server.domain.Entity.MeterMan;
 import jakarta.persistence.*;
 import lombok.*;
 
