@@ -1,5 +1,6 @@
 package com.AFFLE.server.domain.Entity;
 
+import com.AFFLE.server.global.BaseEntity;
 import com.AFFLE.server.domain.Entity.MeterMan;
 import jakarta.persistence.*;
 import lombok.*;
@@ -12,7 +13,7 @@ import java.time.LocalDate;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
 @Builder
-public class Notice {
+public class Notice extends BaseEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer postId;

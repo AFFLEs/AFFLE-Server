@@ -1,5 +1,6 @@
 package com.AFFLE.server.domain.Entity;
 
+import com.AFFLE.server.global.BaseEntity;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -8,7 +9,7 @@ import lombok.*;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
 @Builder
-public class MeterMan {
+public class MeterMan extends BaseEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer metermanId;

@@ -2,10 +2,13 @@ server:
   port: 8080
 
 spring:
+  jackson:
+    time-zone: Asia/Seoul
+
   datasource:
-    url: ${DB_URL}
-    username: ${DB_USERNAME}
-    password: ${DB_PASSWORD}
+    url: "jdbc:mysql://db-33k2vq-kr.vpc-pub-cdb.ntruss.com:3306/AffleDB?serverTimezone=UTC&characterEncoding=UTF-8"
+    username: "affleUser"
+    password: "@ffle2025"
     driver-class-name: com.mysql.cj.jdbc.Driver
 
   jpa:
