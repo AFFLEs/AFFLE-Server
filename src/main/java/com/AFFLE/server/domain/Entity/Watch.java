@@ -1,5 +1,6 @@
 package com.AFFLE.server.domain.Entity;
 
+import com.AFFLE.server.global.BaseEntity;
 import com.AFFLE.server.domain.Entity.Elder;
 import jakarta.persistence.*;
 import lombok.*;
@@ -12,7 +13,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
 @Builder
-public class Watch {
+public class Watch extends BaseEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer watchId;

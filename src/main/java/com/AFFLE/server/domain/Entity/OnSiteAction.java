@@ -1,5 +1,6 @@
 package com.AFFLE.server.domain.Entity;
 
+import com.AFFLE.server.global.BaseEntity;
 import com.AFFLE.server.domain.Entity.Elder;
 import com.AFFLE.server.domain.Entity.MeterMan;
 import jakarta.persistence.*;
@@ -12,7 +13,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
 @Builder
-public class OnSiteAction {
+public class OnSiteAction extends BaseEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer actionId;

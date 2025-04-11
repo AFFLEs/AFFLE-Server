@@ -2,6 +2,9 @@ server:
   port: 8080
 
 spring:
+  jackson:
+    time-zone: Asia/Seoul
+
   datasource:
     url: "jdbc:mysql://db-33k2vq-kr.vpc-pub-cdb.ntruss.com:3306/AffleDB?serverTimezone=UTC&characterEncoding=UTF-8"
     username: "affleUser"

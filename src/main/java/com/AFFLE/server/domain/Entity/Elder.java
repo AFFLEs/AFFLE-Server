@@ -1,5 +1,6 @@
 package com.AFFLE.server.domain.Entity;
 
+import com.AFFLE.server.global.BaseEntity;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -8,7 +9,7 @@ import lombok.*;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
 @Builder
-public class Elder {
+public class Elder extends BaseEntity {
     @Id // 기본키 설정
     @GeneratedValue(strategy = GenerationType.IDENTITY) // ID 자동 증가 설정
     private Integer elderId;
