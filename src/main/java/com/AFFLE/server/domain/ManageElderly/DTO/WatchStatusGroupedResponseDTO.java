@@ -10,6 +10,6 @@ import java.util.List;
 @Builder
 @AllArgsConstructor
 public class WatchStatusGroupedResponseDTO {
-    private List<WatchStatusResponseDTO> wearing;
+    private List<WatchWearingResponseDTO> wearing;
     private List<WatchStatusResponseDTO> notWearing;
 }
