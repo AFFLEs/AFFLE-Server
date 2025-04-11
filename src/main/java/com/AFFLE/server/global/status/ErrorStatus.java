@@ -24,6 +24,8 @@ public enum ErrorStatus implements BaseErrorCode {
     // Watch 관련
     WATCH_NOT_FOUND(HttpStatus.NOT_FOUND, "해당 워치를 찾을 수 없습니다."),
     WATCH_ALREADY_REGISTERED(HttpStatus.BAD_REQUEST, "이미 등록된 워치입니다."),
+    WATCH_STATUS_INVALID(HttpStatus.BAD_REQUEST, "올바르지 않은 워치 상태입니다."),
+    WATCH_NOTIFY_TARGET_EMPTY(HttpStatus.BAD_REQUEST, "알림 전송 대상이 비어 있습니다."),
 
     // MeterMan 관련
     METER_MAN_NOT_FOUND(HttpStatus.NOT_FOUND, "해당 검침원을 찾을 수 없습니다."),
