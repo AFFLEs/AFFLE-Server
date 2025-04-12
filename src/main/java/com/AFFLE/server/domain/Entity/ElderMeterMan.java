@@ -1,8 +1,6 @@
 package com.AFFLE.server.domain.Entity;
 
 import com.AFFLE.server.global.BaseEntity;
-import com.AFFLE.server.domain.Entity.Elder;
-import com.AFFLE.server.domain.Entity.MeterMan;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 import lombok.*;
@@ -21,11 +19,13 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @Builder
 public class ElderMeterMan extends BaseEntity {
-    @Id // 복합키 대신 단일키를 만들고 elderId + metermanId 조합에 unique를 걸었음
+
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    // 한 노인이 여러 검침원과 관계 맺을 수 있다고 가정
+    @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "elderId", nullable = false)
     private Elder elder;
 

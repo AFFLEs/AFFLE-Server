@@ -29,7 +29,11 @@ public enum ErrorStatus implements BaseErrorCode {
 
     // MeterMan 관련
     METER_MAN_NOT_FOUND(HttpStatus.NOT_FOUND, "해당 검침원을 찾을 수 없습니다."),
-    METER_MAN_ALREADY_ASSIGNED(HttpStatus.BAD_REQUEST, "이미 배정된 검침원입니다.");
+    METER_MAN_ALREADY_ASSIGNED(HttpStatus.BAD_REQUEST, "이미 배정된 검침원입니다."),
+
+    // System 관련
+    DUPLICATED_CONTACT(HttpStatus.BAD_REQUEST, "중복된 연락처입니다."),
+    NO_ESSENTIAL_INFO(HttpStatus.BAD_REQUEST, "필수 정보가 누락되었습니다.");
 
     private final HttpStatus httpStatus;
     private final String message;

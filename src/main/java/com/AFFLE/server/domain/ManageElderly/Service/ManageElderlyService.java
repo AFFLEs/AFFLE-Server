@@ -23,7 +23,7 @@ public class ManageElderlyService {
 
         // MeterMan 기준으로 Elderly 리스트 묶기
         Map<String, List<ElderMeterMan>> grouped = data.stream()
-                .collect(Collectors.groupingBy(em -> em.getMeterMan().getName() + "||" + em.getMeterMan().getMetermanLoc()));
+                .collect(Collectors.groupingBy(em -> em.getMeterMan().getName() + "||" + em.getMeterMan().getMeterManLoc()));
 
         List<MeterManWithEldersDTO> result = new ArrayList<>();
 
