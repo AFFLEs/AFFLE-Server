@@ -11,10 +11,11 @@ import java.time.LocalDate;
 @Table(
         name = "elder_meter_man",
         uniqueConstraints = {
-                @UniqueConstraint(columnNames = {"elderId", "metermanId"})
+                @UniqueConstraint(columnNames = {"elderId"}) // 노인 당 한 명의 검침원이 배정되니까 elderId로만 Unique로 충분
         }
 )
 @Getter
+@Setter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
 @Builder
@@ -24,7 +25,6 @@ public class ElderMeterMan extends BaseEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    // 한 노인이 여러 검침원과 관계 맺을 수 있다고 가정
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "elderId", nullable = false)
     private Elder elder;
@@ -32,6 +32,7 @@ public class ElderMeterMan extends BaseEntity {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "metermanId", nullable = false)
     private MeterMan meterMan;
+
 
     @JsonFormat(pattern = "yyyy.MM.dd")
     private LocalDate recentVisitDate;

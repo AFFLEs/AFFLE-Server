@@ -18,7 +18,7 @@ public class Watch extends BaseEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer watchId;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "elderId")
     private Elder elder;
 
