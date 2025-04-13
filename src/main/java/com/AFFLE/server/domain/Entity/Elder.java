@@ -4,6 +4,8 @@ import com.AFFLE.server.global.BaseEntity;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.List;
+
 @Entity
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
@@ -30,4 +32,16 @@ public class Elder extends BaseEntity {
     public enum Sex {
         남, 여
     }
+
+    // 노인 공지 알림
+    @OneToMany(mappedBy = "elder", cascade = CascadeType.REMOVE, orphanRemoval = true)
+    private List<Notification> notifications;
+
+    @OneToOne(mappedBy = "elder", cascade = CascadeType.REMOVE, orphanRemoval = true)
+    private ElderMeterMan assignment;
+
+    @OneToOne(mappedBy = "elder", cascade = CascadeType.REMOVE, orphanRemoval = true)
+    private Watch watch;
+
+
 }
