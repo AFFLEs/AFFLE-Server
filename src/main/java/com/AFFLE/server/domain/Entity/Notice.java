@@ -6,6 +6,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.LocalDate;
+import java.util.List;
 
 
 @Entity
@@ -31,10 +32,7 @@ public class Notice extends BaseEntity {
     @Column(length = 300)
     private String fileUrl;
 
-    @Enumerated(EnumType.STRING)
-    private Target target;
+    @Column(name = "target")
+    private Integer target;
 
-    public enum Target {
-        검침원, 노인
-    }
 }

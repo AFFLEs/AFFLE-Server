@@ -34,7 +34,9 @@ public enum ErrorStatus implements BaseErrorCode {
     // System 관련
     DUPLICATED_CONTACT(HttpStatus.BAD_REQUEST, "중복된 연락처입니다."),
     NO_ESSENTIAL_INFO(HttpStatus.BAD_REQUEST, "필수 정보가 누락되었습니다."),
-    RELATION_NOT_FOUND(HttpStatus.NOT_FOUND, "해당 관계 정보를 찾을 수 없습니다.");
+    RELATION_NOT_FOUND(HttpStatus.NOT_FOUND, "해당 관계 정보를 찾을 수 없습니다."),
+    NOTICE_NOT_FOUND(HttpStatus.NOT_FOUND, "해당 공지 정보를 찾을 수 없습니다."),
+    NOTICE_AUTHOR_MISMATCH(HttpStatus.FORBIDDEN, "공지의 작성자만 해당 공지를 삭제할 수 있습니다.");
 
     private final HttpStatus httpStatus;
     private final String message;
